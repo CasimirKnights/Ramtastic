@@ -1,0 +1,191 @@
+# ════════════════════════════════════════════════════════════════════════
+#  Public Ramtastic repo — DEFAULT-DENY gitignore
+# ════════════════════════════════════════════════════════════════════════
+#  Nothing is tracked unless it is EXPLICITLY whitelisted below. A Craft
+#  solution, a private root, a production-step, a backup — none of it can
+#  reach this repo by accident. To publish a file you must add a `!` rule
+#  for it here, on purpose. Suspense is the default; disclosure is opt-in.
+#
+#  Staged like the website: works appear only as they are released.
+# ════════════════════════════════════════════════════════════════════════
+
+# ── 1. Deny everything ──────────────────────────────────────────────────
+/*
+/**
+
+# ── 2. Allow the repo plumbing + public root ────────────────────────────
+!/.gitignore
+!/README.md
+!/lakefile.lean
+!/lean-toolchain
+!/lake-manifest.json
+!/Ramtastic.lean
+# Ramtastic.lean is the PUBLIC root — imports only released works.
+# Ramtastic_Vega.lean (the full grand-unified root) stays denied by /*.
+
+# ── 3. Allow the Ramtastic/ tree, but deny its contents by default ──────
+!/Ramtastic/
+/Ramtastic/*
+
+# ── 4. RELEASED: Bass ───────────────────────────────────────────────────
+!/Ramtastic/Bass/
+/Ramtastic/Bass/*
+!/Ramtastic/Bass/HingeRotation.lean
+!/Ramtastic/Bass/README.md
+# Ramtastic/Bass/README_Vega.md (the full README with cross-work
+# "Connectivity" sections) stays denied — it is NOT whitelisted.
+
+# ── Materials (public quote / description) ──────────────────────────────
+!/Materials/
+/Materials/*
+!/Materials/description.png
+
+# ── 5. Belt-and-suspenders: never track these even if a rule slips ──────
+# (Craft solutions, private roots, spoiler companions, build artifacts.)
+Ramtastic/Craft/
+Ramtastic_Vega.lean
+**/README_Vega.md
+__production_steps/
+_backups/
+documentation/
+.lake/
+**/.lake/
+*.olean
+*.ilean
+.DS_Store
+
+# ── TOWER (sectors / scaffolding) — to be whitelisted next, per-file,
+#    after each is scanned clean of Craft-solution references. ───────────
+
+!/Ramtastic/SchurTest.lean
+
+!/Ramtastic/BSD/
+/Ramtastic/BSD/*
+!/Ramtastic/BSD/ArithmeticGAGA.lean
+!/Ramtastic/BSD/BSDFormula.lean
+!/Ramtastic/BSD/EllipticCurve.lean
+!/Ramtastic/BSD/HeightPairing.lean
+!/Ramtastic/BSD/Kolyvagin.lean
+!/Ramtastic/BSD/LFunction.lean
+!/Ramtastic/BSD/MordellWeil.lean
+!/Ramtastic/BSD/Statement.lean
+!/Ramtastic/BSD/TateShafarevich.lean
+
+!/Ramtastic/ChowGroups/
+/Ramtastic/ChowGroups/*
+!/Ramtastic/ChowGroups/AlgebraicCycle.lean
+!/Ramtastic/ChowGroups/ChowGroup.lean
+!/Ramtastic/ChowGroups/ChowRing.lean
+!/Ramtastic/ChowGroups/IntersectionProduct.lean
+!/Ramtastic/ChowGroups/ProjectiveSpace.lean
+!/Ramtastic/ChowGroups/RationalEquivalence.lean
+
+!/Ramtastic/ComplexStructure/
+/Ramtastic/ComplexStructure/*
+!/Ramtastic/ComplexStructure/AlmostComplex.lean
+!/Ramtastic/ComplexStructure/DelDelBar.lean
+!/Ramtastic/ComplexStructure/Integrability.lean
+!/Ramtastic/ComplexStructure/TypeDecomposition.lean
+
+!/Ramtastic/CycleClass/
+/Ramtastic/CycleClass/*
+!/Ramtastic/CycleClass/CycleClassMap.lean
+!/Ramtastic/CycleClass/FundamentalClass.lean
+!/Ramtastic/CycleClass/ImageInHodge.lean
+!/Ramtastic/CycleClass/RingHomomorphism.lean
+!/Ramtastic/CycleClass/ThomClass.lean
+
+!/Ramtastic/DeRham/
+/Ramtastic/DeRham/*
+!/Ramtastic/DeRham/ClosedExact.lean
+!/Ramtastic/DeRham/DeRhamTheorem.lean
+!/Ramtastic/DeRham/DifferentialForms.lean
+!/Ramtastic/DeRham/Functoriality.lean
+!/Ramtastic/DeRham/LeibnizRule.lean
+!/Ramtastic/DeRham/LongExactSequence.lean
+!/Ramtastic/DeRham/ManifoldForms.lean
+!/Ramtastic/DeRham/Quotient.lean
+!/Ramtastic/DeRham/StokesTheorem.lean
+!/Ramtastic/DeRham/WedgeProduct.lean
+
+!/Ramtastic/Dolbeault/
+/Ramtastic/Dolbeault/*
+!/Ramtastic/Dolbeault/DolbeaultCohomology.lean
+!/Ramtastic/Dolbeault/DolbeaultComplex.lean
+!/Ramtastic/Dolbeault/DolbeaultTheorem.lean
+
+!/Ramtastic/GAGA/
+/Ramtastic/GAGA/*
+!/Ramtastic/GAGA/AnalyticSheaves.lean
+!/Ramtastic/GAGA/ChowToHodge.lean
+!/Ramtastic/GAGA/GAGACorrespondence.lean
+!/Ramtastic/GAGA/ProjectiveKahler.lean
+!/Ramtastic/GAGA/RationalHodgeStructure.lean
+
+!/Ramtastic/HardyLittlewood/
+/Ramtastic/HardyLittlewood/*
+!/Ramtastic/HardyLittlewood/PrimePairAsymptotic.lean
+!/Ramtastic/HardyLittlewood/Tower.lean
+
+!/Ramtastic/HodgeStar/
+/Ramtastic/HodgeStar/*
+!/Ramtastic/HodgeStar/Codifferential.lean
+!/Ramtastic/HodgeStar/HodgeLaplacian.lean
+!/Ramtastic/HodgeStar/L2InnerProduct.lean
+!/Ramtastic/HodgeStar/StarConstruction.lean
+!/Ramtastic/HodgeStar/StarOperator.lean
+
+!/Ramtastic/Kahler/
+/Ramtastic/Kahler/*
+!/Ramtastic/Kahler/HardLefschetz.lean
+!/Ramtastic/Kahler/HodgeDecomposition.lean
+!/Ramtastic/Kahler/KahlerForm.lean
+!/Ramtastic/Kahler/KahlerLaplacian.lean
+!/Ramtastic/Kahler/LefschetzOperator.lean
+!/Ramtastic/Kahler/SL2Weight.lean
+
+!/Ramtastic/Polignac/
+/Ramtastic/Polignac/*
+!/Ramtastic/Polignac/Statement.lean
+
+!/Ramtastic/PrincipalBundles/
+/Ramtastic/PrincipalBundles/*
+!/Ramtastic/PrincipalBundles/Connection.lean
+!/Ramtastic/PrincipalBundles/PrincipalBundle.lean
+
+!/Ramtastic/QuantumYM/
+/Ramtastic/QuantumYM/*
+!/Ramtastic/QuantumYM/CompactGroupProduct.lean
+!/Ramtastic/QuantumYM/GlimmJaffeLimit.lean
+!/Ramtastic/QuantumYM/StrongResolventConvergence.lean
+!/Ramtastic/QuantumYM/WilsonActionConstruction.lean
+
+!/Ramtastic/SeibergWitten/
+/Ramtastic/SeibergWitten/*
+!/Ramtastic/SeibergWitten/CliffordBundle.lean
+
+!/Ramtastic/Sobolev/
+/Ramtastic/Sobolev/*
+!/Ramtastic/Sobolev/CartanProof.lean
+!/Ramtastic/Sobolev/CompactManifold.lean
+!/Ramtastic/Sobolev/EllipticOperator.lean
+!/Ramtastic/Sobolev/EllipticRegularity.lean
+!/Ramtastic/Sobolev/FredholmTheory.lean
+!/Ramtastic/Sobolev/HodgeTheorem.lean
+!/Ramtastic/Sobolev/SobolevSpaces.lean
+
+!/Ramtastic/Tao/
+/Ramtastic/Tao/*
+!/Ramtastic/Tao/BoundedPrimeGaps.lean
+!/Ramtastic/Tao/Tower.lean
+
+!/Ramtastic/TwinPrimes/
+/Ramtastic/TwinPrimes/*
+!/Ramtastic/TwinPrimes/Statement.lean
+!/Ramtastic/TwinPrimes/Tower.lean
+
+# ── Spoiler audit ledgers — internal only, NEVER publish ────────────────
+SPOILER_ALERT.md
+**/SPOILER_ALERT.md
+tools/spoiler_master.tsv
+tools/tower_*.txt
