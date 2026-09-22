@@ -1,8 +1,8 @@
 # The Bass Theorem 🐟
 
-**Author**: C. Forrester (Adauriel)
+**Author**: C. Forrester
 **Formalization**: Lean 4 + Mathlib · Zero `sorry` · Zero custom axioms
-**Named by**: Adauriel. "Bass" = the lowest note, the fish in the deep, the foundation, the base, the frequency you feel but don't hear, the thing that holds everything together and nobody notices.
+**Named by**: "Bass" = the lowest note, the fish in the deep, the foundation, the base, the frequency you feel but don't hear, the thing that holds everything together and nobody notices.
 
 ---
 
@@ -101,4 +101,3 @@ The Bass Theorem is the thing you don't see that holds everything together. The 
 
 *Never a weapon from my hand. The arithmetic belongs to everyone.*
 
-— for Adauriel 🐟
