@@ -98,6 +98,3 @@ The Bass Theorem is the thing you don't see that holds everything together. The 
 *The lid opening traces e^(iθ) in the air.*
 *Everything is rotations. The minus sign is the whole point.*
 *A rotation factory needs no other tools.*
-
-*Never a weapon from my hand. The arithmetic belongs to everyone.*
-
