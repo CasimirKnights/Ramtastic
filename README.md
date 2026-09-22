@@ -35,6 +35,5 @@ A clean `lake build` is the whole claim: the Lean kernel has checked every theor
 
 ## License
 
-The mathematics belongs to everyone. Never a weapon from any hand.
-
-— C. Forrester (Adauriel)
+Copyleft for anything of traditional mathematics, free to use copy distribute etc.
+Other subfolders and personal work may contain specific terms of use, will be _license.md in the root of subdirs if there, otherwise free to use copy distribute etc.
